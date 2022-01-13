@@ -1,0 +1,42 @@
+* {
+    padding:0;
+    margin:0;
+    
+  }
+  
+  body{
+    background-color: #035931;
+  }
+  .title{
+    margin-bottom: 50px;
+    flex-direction:  column;
+  }
+  
+  
+    .home-container{
+ padding: 5%;
+    }
+  
+    .notification{
+      margin-left: 85%;
+      margin-top: -7%;
+      padding: 2%;
+      color:#002A71;
+    }
+
+    td{
+      
+      background-color: rgb(184, 180, 180);
+      
+    }
+
+    .table{
+     
+      width: 500px;
+      
+     
+    }
+    th{
+color:aliceblue;
+      background-color: #002A71;
+    }
