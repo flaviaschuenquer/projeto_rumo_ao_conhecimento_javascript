@@ -66,16 +66,6 @@ function Formulario() {
     alert('Usuario Cadastrado com sucesso!')
   }
 
-  /*
-  const desempenho = [
-    { label: 'Atende' },
-    { label: 'Atende Parcialmente' },
-    { label: 'Não Atende' },
-    { label: 'Supera' }
-  ]
-
-  */
-
   return (
     <div className="bg-formulario">
       <Navbar />
@@ -117,6 +107,7 @@ function Formulario() {
                   <Grid item xs={13} sm={6}>
                     <TextField
                       type="date"
+                      className="maskDate"
                       name="dataAdmissao"
                       required
                       fullWidth
@@ -168,6 +159,7 @@ function Formulario() {
                   <Grid item xs={13} sm={6}>
                     <TextField
                       type="date"
+                      className="maskDate"
                       name="dataRealizacao"
                       required
                       fullWidth
@@ -201,18 +193,17 @@ function Formulario() {
                     />
                   </Grid>
 
-                  <Grid item xs={13}>
-                    <TextField
-                      label="Compromentimento"
-                      variant="filled"
-                      color="success"
-                      type="text"
-                      name="comprometimento"
-                      fullWidth
-                      id="outlined-disabled"
-                      defaultValue="O colaborador apresenta comprometimento ético em relação aos valores da Empresa e seu envolvimento nas demandas estabelecidas:"
-                    />
-                  </Grid>
+                  <div style={{ margin: '20px' }}>
+                    <h3>COMPETÊNCIAS:</h3>
+                  </div>
+
+                  <div style={{ margin: '20px' }}>
+                    <h4>
+                      1 - COMPROMETIMENTO: O colaborador apresenta
+                      compormetimento ético em relação aos valores da Empresa e
+                      seu envolvimento nas demandas estabelecidas:
+                    </h4>
+                  </div>
 
                   <Grid item xs={13} sm={2}>
                     <TextField
@@ -273,18 +264,14 @@ function Formulario() {
                     />
                   </Grid>
 
-                  <Grid item xs={13}>
-                    <TextField
-                      label="Comunicação"
-                      variant="filled"
-                      color="success"
-                      type="text"
-                      name="comunicacao"
-                      fullWidth
-                      id="outlined-disabled"
-                      defaultValue="O colaborador apresenta clareza e objetividade na emissão e execução de mensagens (oral ou escrita), propiciando um perfeito entendimento das informações:"
-                    />
-                  </Grid>
+                  <div style={{ margin: '20px' }}>
+                    <h4>
+                      2 - COMUNICAÇÃO: O colaborador apresenta clareza e
+                      objetividade na emissão e execução de mensagens (oral ou
+                      escrita), propiciando um perfeito entendimento das
+                      informações:
+                    </h4>
+                  </div>
 
                   <Grid item xs={13} sm={2}>
                     <TextField
@@ -345,17 +332,13 @@ function Formulario() {
                     />
                   </Grid>
 
-                  <Grid item xs={13}>
-                    <TextField
-                      label="Proatividade"
-                      variant="filled"
-                      color="success"
-                      type="text"
-                      name="proatividade"
-                      fullWidth
-                      defaultValue="O colaborador apresenta  iniciativa, identifica problemas, apresenta soluções e realiza alinhamentos com a liderança:"
-                    />
-                  </Grid>
+                  <div style={{ margin: '20px' }}>
+                    <h4>
+                      3 - PROATIVIDADE: O colaborador apresenta iniciativa,
+                      identifica problemas, apresenta soluções e realiza
+                      alinhamentos com a liderança:
+                    </h4>
+                  </div>
 
                   <Grid item xs={13} sm={2}>
                     <TextField
@@ -416,18 +399,13 @@ function Formulario() {
                     />
                   </Grid>
 
-                  <Grid item xs={13}>
-                    <TextField
-                      label="Relacionamento"
-                      variant="filled"
-                      color="success"
-                      type="text"
-                      name="relacionamento"
-                      fullWidth
-                      id="outlined-disabled"
-                      defaultValue="O colaborador se relaciona bem com a equipe, com o cliente e com o Gestor, reforçando um bom clima de trabalho em um formato colaborativo:"
-                    />
-                  </Grid>
+                  <div style={{ margin: '20px' }}>
+                    <h4>
+                      4 - RELACIONAMENTO: O colaborador se relaciona bem com a
+                      equipe, com o cliente e com o Gestor, reforçando um bom
+                      clima de trabalho em um formato colaborativo:
+                    </h4>
+                  </div>
 
                   <Grid item xs={13} sm={2}>
                     <TextField
@@ -488,18 +466,13 @@ function Formulario() {
                     />
                   </Grid>
 
-                  <Grid item xs={13}>
-                    <TextField
-                      label="Flexibilidade"
-                      variant="filled"
-                      color="success"
-                      type="text"
-                      name="flexibilidade"
-                      fullWidth
-                      id="outlined-disabled"
-                      defaultValue="O colaborador é flexivel e disponível para mudanças e diferentes visões no grupo de trabalho:"
-                    />
-                  </Grid>
+                  <div style={{ margin: '20px' }}>
+                    <h4>
+                      5 - FLEXIBILIDADE: O colaborador é flexível e disponível
+                      para mudanças e diferentes visões no grupo de trabalho
+                      atual :
+                    </h4>
+                  </div>
 
                   <Grid item xs={13} sm={2}>
                     <TextField
@@ -560,18 +533,12 @@ function Formulario() {
                     />
                   </Grid>
 
-                  <Grid item xs={13}>
-                    <TextField
-                      label="Organização"
-                      variant="filled"
-                      color="success"
-                      type="text"
-                      name="organizacao"
-                      fullWidth
-                      id="outlined-disabled"
-                      defaultValue="O colaborador é organizado e disciplinado em suas tarefas e métodos de trabalho:"
-                    />
-                  </Grid>
+                  <div style={{ margin: '20px' }}>
+                    <h4>
+                      6 - ORGANIZAÇÃO: O colaborador é organizado e disciplinado
+                      em suas tarefas e métodos de trabalho no seu dia a dia:
+                    </h4>
+                  </div>
 
                   <Grid item xs={13} sm={2}>
                     <TextField
@@ -632,18 +599,14 @@ function Formulario() {
                     />
                   </Grid>
 
-                  <Grid item xs={13}>
-                    <TextField
-                      label="Inteligência Emocional"
-                      variant="filled"
-                      color="success"
-                      type="text"
-                      name="inteligenciaEmocional"
-                      fullWidth
-                      id="outlined-disabled"
-                      defaultValue="O colaborador demonstra controle em relação as adversidades(frustrações, pressões, problemas pessoais...):"
-                    />
-                  </Grid>
+                  <div style={{ margin: '20px' }}>
+                    <h4>
+                      {' '}
+                      7 - INTELIGÊNCIA EMOCIONAL: O colaborador demonstra
+                      controle em relação as adversidades ( frustrações,
+                      pressões, problemas pessoais... ):
+                    </h4>
+                  </div>
 
                   <Grid item xs={13} sm={2}>
                     <TextField
@@ -704,18 +667,14 @@ function Formulario() {
                     />
                   </Grid>
 
-                  <Grid item xs={13}>
-                    <TextField
-                      label="Conhecimentos Específicos/Técnicos"
-                      variant="filled"
-                      color="success"
-                      type="text"
-                      name="conhecimentoTecnico"
-                      fullWidth
-                      id="outlined-disabled"
-                      defaultValue="O colaborador possui conhecimento técnico específico para o cargo e para a função que exerce no momento, bem como as qualificações apresentadas pelo profissional:"
-                    />
-                  </Grid>
+                  <div style={{ margin: '20px' }}>
+                    <h4>
+                      8 - CONHECIMENTOS ESPECÍFICOS/TÉCNICO: O colaborador
+                      possui conhecimento técnico específico para o cargo e para
+                      a função que exerce no momento, bem como as qualificações
+                      apresentadas pelo profissional:
+                    </h4>
+                  </div>
 
                   <Grid item xs={13} sm={2}>
                     <TextField
@@ -776,10 +735,16 @@ function Formulario() {
                     />
                   </Grid>
 
-                  <div className="home-container">COMENTÁRIO DO AVALIADOR</div>
+                  <div style={{ margin: '20px' }}>
+                    <h3>COMENTÁRIOS DO AVALIADOR:</h3>
+                  </div>
 
                   <Grid item xs={12}>
                     <TextField
+                      id="outlined-multiline-static"
+                      label="Multiline"
+                      multiline
+                      rows={4}
                       type="text"
                       name="comentariosAvaliador"
                       fullWidth
