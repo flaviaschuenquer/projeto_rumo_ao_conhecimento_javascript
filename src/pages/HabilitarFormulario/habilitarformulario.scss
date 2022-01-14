@@ -1,0 +1,73 @@
+.bg-habilitarformulario {
+  background-color: #035931;
+}
+
+.box {
+  width: 50px;
+  height: 50px;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  margin-left: 30%;
+  width: 800px;
+  height: 100%;
+  border: rgb(184, 183, 183) 0.5px solid;
+}
+
+.loginForm {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  h3 {
+    font-size: small;
+  }
+
+  div {
+    display: flex;
+    flex-direction: column;
+
+    label {
+      font-size: 25px;
+    }
+  }
+  spam {
+    color: red;
+    margin: 3px;
+  }
+
+  input {
+    width: 500px;
+    height: 30px;
+    font-size: larger;
+    border-radius: 5px;
+    border-style: solid;
+    padding: 10px;
+  }
+
+  .botao {
+    display: flex;
+    align-items: center;
+  }
+}
+.user-login__submit-button-entrar {
+  width: 30%;
+  margin-top: 30px;
+  margin-left: 35%;
+  margin-bottom: 24px;
+  padding: 1%;
+  font-size: 16px;
+  border-radius: 6px;
+  color: white;
+  background-color: #002a71;
+  border: none;
+  font-weight: bold;
+  align-items: center;
+
+  &:hover {
+    background-color: #3c70c9;
+  }
+}
