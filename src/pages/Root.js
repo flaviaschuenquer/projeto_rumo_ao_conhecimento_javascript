@@ -12,14 +12,18 @@ import Plano from './Plano'
 import ListaFuncionario from './ListaFuncionario'
 import AtualizarCadastro from './AtualizarCadastro'
 import Formulario from './Formulario'
-import HabilitarFormulario from './HabilitarFormulario'
+
+import HabilitarForm from './HabilitarForm'
+import Aprovacao from './Aprovacao'
+import Validacao from './Validacao'
 
 function Routes() {
   return (
     <BrowserRouter>
       <Switch>
         <Route path="/" exact component={Login} />
-
+        <Route path="/validacao" exact component={Validacao} />
+        <Route path="/aprovacao" exact component={Aprovacao} />
         <Route path="/home" exact component={Home} />
         <Route path="/cadastro" exact component={Cadastro} />
         <Route path="/recuperarSenha" exact component={RecuperarSenha} />
@@ -36,11 +40,7 @@ function Routes() {
         />
         <Route path="/acessarCadastro" exact component={AcessarCadastro} />
         <Route path="/formulario" exact component={Formulario} />
-        <Route
-          path="/habilitarformulario"
-          exact
-          component={HabilitarFormulario}
-        />
+        <Route path="/habilitarForm" exact component={HabilitarForm} />
       </Switch>
     </BrowserRouter>
   )

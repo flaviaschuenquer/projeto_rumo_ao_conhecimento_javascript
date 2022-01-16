@@ -14,46 +14,12 @@ import api from '../../Services/api'
 
 function HabilitarFormulario() {
   const [usuario, setUsuario] = useState({
+    login: '',
     nome: '',
-    dataAdmissao: '',
-    cargo: '',
-    gestor: '',
-    dataRealizacao: '',
-    cliente: '',
-
-    anivelDesempenho: '',
-    aexemplos: '',
-    acomentarios: '',
-
-    bnivelDesempenho: '',
-    bexemplos: '',
-    bcomentarios: '',
-
-    cnivelDesempenho: '',
-    cexemplos: '',
-    ccomentarios: '',
-
-    dnivelDesempenho: '',
-    dexemplos: '',
-    dcomentarios: '',
-
-    enivelDesempenho: '',
-    eexemplos: '',
-    ecomentarios: '',
-
-    fnivelDesempenho: '',
-    fexemplos: '',
-    fcomentarios: '',
-
-    gnivelDesempenho: '',
-    gexemplos: '',
-    gcomentarios: '',
-
-    hnivelDesempenho: '',
-    hexemplos: '',
-    hcomentarios: '',
-
-    comentariosAvaliador: ''
+    data: '',
+    avaliacao: '',
+    coach: '',
+    pdi: ''
   })
 
   console.log(usuario)
@@ -84,14 +50,15 @@ function HabilitarFormulario() {
                   <h2>Habilitar formulário de Avaliação:</h2>
                   <h3>Matrícula do colaborador:</h3>
                 </div>
-                <Grid container spacing={2}>
-                  <Grid item xs={12} sm={6}>
+                <Grid container spacing={3}>
+                  <Grid item xs={12}>
                     <TextField
                       type="text"
                       autoComplete="given-name"
                       name="login"
                       request="true"
                       className="maskDate"
+                      rows={4}
                       required
                       fullWidth
                       id="login"
@@ -100,21 +67,6 @@ function HabilitarFormulario() {
                       value={usuario?.login}
                       onChange={event => {
                         setUsuario({ ...usuario, login: event.target.value })
-                      }}
-                    />
-                  </Grid>
-
-                  <Grid item xs={13} sm={6}>
-                    <TextField
-                      type="text"
-                      required
-                      fullWidth
-                      id="nome"
-                      label="Nome Completo:"
-                      name="name"
-                      value={usuario?.nome}
-                      onChange={event => {
-                        setUsuario({ ...usuario, nome: event.target.value })
                       }}
                     />
                   </Grid>
