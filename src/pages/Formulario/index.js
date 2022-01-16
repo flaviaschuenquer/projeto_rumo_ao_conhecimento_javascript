@@ -11,7 +11,6 @@ import Container from '@mui/material/Container'
 import Navbar from '../../components/Navbar/index'
 
 import api from '../../Services/api'
-import { green } from '@mui/material/colors'
 
 function Formulario() {
   const [usuario, setUsuario] = useState({
@@ -22,7 +21,6 @@ function Formulario() {
     dataRealizacao: '',
     cliente: '',
 
-    anivelDesempenho: '',
     aexemplos: '',
     acomentarios: '',
     anivelDesempenho: '',
@@ -55,15 +53,22 @@ function Formulario() {
     hexemplos: '',
     hcomentarios: '',
 
-    comentariosAvaliador: ''
+    comentariosAvaliador: '',
+
+    perfis: [{ id: 4 }]
   })
 
   console.log(usuario)
 
-  async function handleSubmitOnRegister() {
+  const handleSubmitOnRegister = async () => {
     console.log('Usuario', usuario)
-    await api.post('api/v1/usuario/salvar', usuario)
-    alert('Usuario Cadastrado com sucesso!')
+    try {
+      const response = await api.post('/api/v1/usuario', usuario)
+      console.log('RETORNO API:', response.data)
+      alert('Usuario Cadastrado com sucesso!')
+    } catch (err) {
+      console.log('erro', err.response)
+    }
   }
 
   return (
@@ -205,13 +210,14 @@ function Formulario() {
                     </h4>
                   </div>
 
-                  <Grid item xs={13} sm={2}>
+                  <Grid item xs={13} sm={4}>
                     <TextField
                       type="text"
                       name="nivelDesempenho"
+                      required
                       fullWidth
                       id="nivelDesempenho"
-                      label="Nível de Desempenho:"
+                      label="1:Atende, 2:Atende parcialmente, 3:Não atende, 4:Supera"
                       value={usuario?.anivelDesempenho}
                       onChange={event => {
                         setUsuario({
@@ -222,7 +228,7 @@ function Formulario() {
                     />
                   </Grid>
 
-                  <Grid item xs={13} sm={5}>
+                  <Grid item xs={13} sm={4}>
                     <TextField
                       id="outlined-multiline-static"
                       label="Multiline"
@@ -243,7 +249,7 @@ function Formulario() {
                     />
                   </Grid>
 
-                  <Grid item xs={13} sm={5}>
+                  <Grid item xs={13} sm={4}>
                     <TextField
                       id="outlined-multiline-static"
                       label="Multiline"
@@ -273,13 +279,14 @@ function Formulario() {
                     </h4>
                   </div>
 
-                  <Grid item xs={13} sm={2}>
+                  <Grid item xs={13} sm={4}>
                     <TextField
                       type="text"
                       name="nivelDesempenho"
+                      required
                       fullWidth
                       id="nivelDesempenho"
-                      label="Nível de Desempenho:"
+                      label="1:Atende, 2:Atende parcialmente, 3:Não atende, 4:Supera"
                       value={usuario?.bnivelDesempenho}
                       onChange={event => {
                         setUsuario({
@@ -290,7 +297,7 @@ function Formulario() {
                     />
                   </Grid>
 
-                  <Grid item xs={13} sm={5}>
+                  <Grid item xs={13} sm={4}>
                     <TextField
                       id="outlined-multiline-static"
                       label="Multiline"
@@ -311,7 +318,7 @@ function Formulario() {
                     />
                   </Grid>
 
-                  <Grid item xs={13} sm={5}>
+                  <Grid item xs={13} sm={4}>
                     <TextField
                       id="outlined-multiline-static"
                       label="Multiline"
@@ -340,13 +347,14 @@ function Formulario() {
                     </h4>
                   </div>
 
-                  <Grid item xs={13} sm={2}>
+                  <Grid item xs={13} sm={4}>
                     <TextField
                       type="text"
                       name="nivelDesempenho"
+                      required
                       fullWidth
                       id="nivelDesempenho"
-                      label="Nível de Desempenho:"
+                      label="1:Atende, 2:Atende parcialmente, 3:Não atende, 4:Supera"
                       value={usuario?.cnivelDesempenho}
                       onChange={event => {
                         setUsuario({
@@ -357,7 +365,7 @@ function Formulario() {
                     />
                   </Grid>
 
-                  <Grid item xs={13} sm={5}>
+                  <Grid item xs={13} sm={4}>
                     <TextField
                       id="outlined-multiline-static"
                       label="Multiline"
@@ -378,7 +386,7 @@ function Formulario() {
                     />
                   </Grid>
 
-                  <Grid item xs={13} sm={5}>
+                  <Grid item xs={13} sm={4}>
                     <TextField
                       id="outlined-multiline-static"
                       label="Multiline"
@@ -407,13 +415,14 @@ function Formulario() {
                     </h4>
                   </div>
 
-                  <Grid item xs={13} sm={2}>
+                  <Grid item xs={13} sm={4}>
                     <TextField
                       type="text"
                       name="nivelDesempenho"
+                      required
                       fullWidth
                       id="nivelDesempenho"
-                      label="Nível de Desempenho:"
+                      label="1:Atende, 2:Atende parcialmente, 3:Não atende, 4:Supera"
                       value={usuario?.dnivelDesempenho}
                       onChange={event => {
                         setUsuario({
@@ -424,7 +433,7 @@ function Formulario() {
                     />
                   </Grid>
 
-                  <Grid item xs={13} sm={5}>
+                  <Grid item xs={13} sm={4}>
                     <TextField
                       id="outlined-multiline-static"
                       label="Multiline"
@@ -445,7 +454,7 @@ function Formulario() {
                     />
                   </Grid>
 
-                  <Grid item xs={13} sm={5}>
+                  <Grid item xs={13} sm={4}>
                     <TextField
                       id="outlined-multiline-static"
                       label="Multiline"
@@ -474,13 +483,14 @@ function Formulario() {
                     </h4>
                   </div>
 
-                  <Grid item xs={13} sm={2}>
+                  <Grid item xs={13} sm={4}>
                     <TextField
                       type="text"
                       name="nivelDesempenho"
+                      required
                       fullWidth
                       id="nivelDesempenho"
-                      label="Nível de Desempenho:"
+                      label="1:Atende, 2:Atende parcialmente, 3:Não atende, 4:Supera"
                       value={usuario?.enivelDesempenho}
                       onChange={event => {
                         setUsuario({
@@ -491,7 +501,7 @@ function Formulario() {
                     />
                   </Grid>
 
-                  <Grid item xs={13} sm={5}>
+                  <Grid item xs={13} sm={4}>
                     <TextField
                       id="outlined-multiline-static"
                       label="Multiline"
@@ -512,7 +522,7 @@ function Formulario() {
                     />
                   </Grid>
 
-                  <Grid item xs={13} sm={5}>
+                  <Grid item xs={13} sm={4}>
                     <TextField
                       id="outlined-multiline-static"
                       label="Multiline"
@@ -540,13 +550,14 @@ function Formulario() {
                     </h4>
                   </div>
 
-                  <Grid item xs={13} sm={2}>
+                  <Grid item xs={13} sm={4}>
                     <TextField
                       type="text"
                       name="nivelDesempenho"
+                      required
                       fullWidth
                       id="nivelDesempenho"
-                      label="Nível de Desempenho:"
+                      label="1:Atende, 2:Atende parcialmente, 3:Não atende, 4:Supera"
                       value={usuario?.fnivelDesempenho}
                       onChange={event => {
                         setUsuario({
@@ -557,7 +568,7 @@ function Formulario() {
                     />
                   </Grid>
 
-                  <Grid item xs={13} sm={5}>
+                  <Grid item xs={13} sm={4}>
                     <TextField
                       id="outlined-multiline-static"
                       label="Multiline"
@@ -578,7 +589,7 @@ function Formulario() {
                     />
                   </Grid>
 
-                  <Grid item xs={13} sm={5}>
+                  <Grid item xs={13} sm={4}>
                     <TextField
                       id="outlined-multiline-static"
                       label="Multiline"
@@ -608,13 +619,14 @@ function Formulario() {
                     </h4>
                   </div>
 
-                  <Grid item xs={13} sm={2}>
+                  <Grid item xs={13} sm={4}>
                     <TextField
                       type="text"
                       name="nivelDesempenho"
+                      required
                       fullWidth
                       id="nivelDesempenho"
-                      label="Nível de Desempenho:"
+                      label="1:Atende, 2:Atende parcialmente, 3:Não atende, 4:Supera"
                       value={usuario?.gnivelDesempenho}
                       onChange={event => {
                         setUsuario({
@@ -625,7 +637,7 @@ function Formulario() {
                     />
                   </Grid>
 
-                  <Grid item xs={13} sm={5}>
+                  <Grid item xs={13} sm={4}>
                     <TextField
                       id="outlined-multiline-static"
                       label="Multiline"
@@ -646,7 +658,7 @@ function Formulario() {
                     />
                   </Grid>
 
-                  <Grid item xs={13} sm={5}>
+                  <Grid item xs={13} sm={4}>
                     <TextField
                       id="outlined-multiline-static"
                       label="Multiline"
@@ -676,13 +688,14 @@ function Formulario() {
                     </h4>
                   </div>
 
-                  <Grid item xs={13} sm={2}>
+                  <Grid item xs={13} sm={4}>
                     <TextField
                       type="text"
                       name="nivelDesempenho"
+                      required
                       fullWidth
                       id="nivelDesempenho"
-                      label="Nível de Desempenho:"
+                      label="1:Atende, 2:Atende parcialmente, 3:Não atende, 4:Supera"
                       value={usuario?.hnivelDesempenho}
                       onChange={event => {
                         setUsuario({
@@ -693,7 +706,7 @@ function Formulario() {
                     />
                   </Grid>
 
-                  <Grid item xs={13} sm={5}>
+                  <Grid item xs={13} sm={4}>
                     <TextField
                       id="outlined-multiline-static"
                       label="Multiline"
@@ -714,7 +727,7 @@ function Formulario() {
                     />
                   </Grid>
 
-                  <Grid item xs={13} sm={5}>
+                  <Grid item xs={13} sm={4}>
                     <TextField
                       id="outlined-multiline-static"
                       label="Multiline"

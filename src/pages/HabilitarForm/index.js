@@ -1,14 +1,13 @@
 import { Link } from 'react-router-dom'
 import { Button } from '../../components/PrimaryButton/styles'
 import React, { useState } from 'react'
-import NotificationsIcon from '@mui/icons-material/Notifications'
+
 import api from '../../Services/api'
 
 import Navbar from '../../components/Navbar/index'
 import Dark from '../../components/Darkmode/Dark'
 
 import './styles.scss'
-import { ContentCopy } from '@mui/icons-material'
 
 function HabilitarForm() {
   const [form, setForm] = useState({
@@ -104,7 +103,7 @@ function HabilitarForm() {
               </table>
             </div>
 
-            <button onClick={this.handleClick}>
+            <button>
               <h1>+</h1>
             </button>
 
