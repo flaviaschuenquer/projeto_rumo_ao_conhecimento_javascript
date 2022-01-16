@@ -13,7 +13,8 @@ import ListaFuncionario from './ListaFuncionario'
 import AtualizarCadastro from './AtualizarCadastro'
 import Formulario from './Formulario'
 
-import HabilitarForm from './HabilitarForm'
+import CriarFormulario from './CriarFormulario'
+import HabilitarFormulario from './HabilitarFormulario'
 import Aprovacao from './Aprovacao'
 import Validacao from './Validacao'
 
@@ -40,7 +41,12 @@ function Routes() {
         />
         <Route path="/acessarCadastro" exact component={AcessarCadastro} />
         <Route path="/formulario" exact component={Formulario} />
-        <Route path="/habilitarForm" exact component={HabilitarForm} />
+        <Route path="/criarFormulario" exact component={CriarFormulario} />
+        <Route
+          path="/HabilitarFormulario"
+          exact
+          component={HabilitarFormulario}
+        />
       </Switch>
     </BrowserRouter>
   )

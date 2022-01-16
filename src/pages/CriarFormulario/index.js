@@ -9,7 +9,7 @@ import Dark from '../../components/Darkmode/Dark'
 
 import './styles.scss'
 
-function HabilitarForm() {
+function CriarFormulario() {
   const [form, setForm] = useState({
     Matricula: '',
     Data: '',
@@ -100,6 +100,46 @@ function HabilitarForm() {
                     />
                   </td>
                 </tr>
+
+                <td>
+                  <textarea
+                    className="inp"
+                    value={form?.Data}
+                    onChange={event => {
+                      setForm({ ...form, Data: event.target.value })
+                    }}
+                  />
+                </td>
+
+                <td>
+                  <textarea
+                    className="inp"
+                    value={form?.Meta}
+                    onChange={event => {
+                      setForm({ ...form, Avaliacao: event.target.value })
+                    }}
+                  />
+                </td>
+
+                <td>
+                  <textarea
+                    className="inp"
+                    value={form?.AlvoDisponivel}
+                    onChange={event => {
+                      setForm({ ...form, Coach: event.target.value })
+                    }}
+                  />
+                </td>
+
+                <td>
+                  <textarea
+                    className="inp"
+                    value={form?.Meta}
+                    onChange={event => {
+                      setForm({ ...form, PDI: event.target.value })
+                    }}
+                  />
+                </td>
               </table>
             </div>
 
@@ -115,7 +155,7 @@ function HabilitarForm() {
                   marginTop: '5%'
                 }}
               >
-                Habilitar Formulário
+                Criar Formulário
               </Button>
             </Link>
           </form>
@@ -125,4 +165,4 @@ function HabilitarForm() {
   )
 }
 
-export default HabilitarForm
+export default CriarFormulario
